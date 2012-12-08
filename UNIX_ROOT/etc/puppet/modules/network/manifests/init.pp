@@ -1,4 +1,4 @@
-class network () {
+class network{
 
   file { "hosts":
     path => "/etc/hosts",
