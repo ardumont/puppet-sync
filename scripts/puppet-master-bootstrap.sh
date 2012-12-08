@@ -18,6 +18,10 @@ if [ ! -f ./puppetlabs-release-precise.deb ]; then
 
     # restart the services
     sudo service puppetmaster restart
+    sudo service puppet stop
+
+    # synchronise the master with the agent once
+    ./bin/puppet-agent-start-no-daemon.sh --debug
 fi
 
 # some special setup
