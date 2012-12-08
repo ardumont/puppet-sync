@@ -12,7 +12,7 @@ Vagrant::Config.run do |config|
     vm1_config.vm.customize ["modifyvm", :id,  "--natdnshostresolver1", "on", "--memory", 512]
     vm1_config.vm.network :hostonly, "192.168.33.10"
     vm1_config.vm.host_name = "puppet.master.com"
-    vm1_config.vm.share_folder "v-data-1", "/etc/puppet/", "./UNIX_ROOT/etc/puppet/"
+    vm1_config.vm.share_folder "v-data-1", "/etc/puppet-mount/", "./UNIX_ROOT/etc/puppet/"
     vm1_config.vm.share_folder "v-data-2", "/home/vagrant/bin", "./scripts"
     vm1_config.vm.share_folder "v-data-3", "/usr/local/bin/enc", "./scripts/enc"
     vm1_config.vm.provision :shell, :path => "./scripts/puppet-master-bootstrap.sh"
