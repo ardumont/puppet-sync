@@ -23,6 +23,6 @@ class stumpwm {
    file {'stumpwm.desktop':
      path   => "$xsessions/stumpwm.desktop",
      ensure => 'present',
-     source => 'puppet:///modules/puppet-stumpwm/stumpwm.desktop',
+     source => 'puppet:///modules/stumpwm/stumpwm.desktop',
    }
 }
