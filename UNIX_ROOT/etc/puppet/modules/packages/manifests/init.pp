@@ -43,6 +43,5 @@ class packages () {
   # fill the packages here
   package {$all:
     provider => 'aptitude',
-    require  => Class['puppet-aptitude'],
   }
 }
