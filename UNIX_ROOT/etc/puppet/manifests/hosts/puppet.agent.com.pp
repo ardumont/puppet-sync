@@ -11,7 +11,7 @@ node 'puppet.agent.com' {
 
   class {'puppet-emacs24':}
 
-#  class {'puppet_java':}
+  class {'puppet-java':}
 
 #  class {'puppet-clojure':}
 }
