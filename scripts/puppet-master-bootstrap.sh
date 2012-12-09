@@ -23,9 +23,15 @@ if [ ! $? = 0 ]; then
 fi
 
 # restart the puppetmaster services to take the puppet installation into account
-sudo service puppetmaster restart
+sudo service puppetmaster stop
 # stop the agent service
 sudo service puppet stop
+
+# to synchronize the master with the agent once
+~/bin/puppet-master-start-no-daemon.sh --debug &
+
+# let some time for the master to start
+sleep 3
 
 # to synchronize the master with the agent once
 ~/bin/puppet-agent-start-no-daemon.sh --debug --onetime
