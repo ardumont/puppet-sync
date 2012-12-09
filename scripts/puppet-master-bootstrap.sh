@@ -16,12 +16,13 @@ if [ ! -f ./puppetlabs-release-precise.deb ]; then
     # see Vagrantfile for /etc/puppet-mount
     sudo ln -s /etc/puppet-mount /etc/puppet
 
-    # restart the services
+    # restart the puppetmaster services to take the puppet installation into account
     sudo service puppetmaster restart
+    # stop the agent service
     sudo service puppet stop
 
-    # synchronise the master with the agent once
-    ./bin/puppet-agent-start-no-daemon.sh --debug
+    # to synchronize the master with the agent once
+    ~/bin/puppet-agent-start-no-daemon.sh --debug --onetime
 fi
 
 # some special setup
