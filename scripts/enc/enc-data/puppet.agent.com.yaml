@@ -4,6 +4,5 @@
   network:
   puppet-stumpwm:
   puppet-emacs24:
-# java:
-# java-dev:
+  puppet-java:
 # puppet-clojure
