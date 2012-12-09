@@ -1,5 +1,5 @@
 node 'puppet.agent.com' {
-  class {'puppet-aptitude':
+  class {'aptitude':
     update => true,
   }
 

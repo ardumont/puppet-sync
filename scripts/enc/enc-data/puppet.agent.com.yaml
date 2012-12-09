@@ -1,4 +1,4 @@
-  puppet-aptitude:
+  aptitude:
     update: true
   packages:
   network:
