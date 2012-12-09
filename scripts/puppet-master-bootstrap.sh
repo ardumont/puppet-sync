@@ -10,10 +10,19 @@ if [ ! -f ./puppetlabs-release-precise.deb ]; then
     sudo apt-get update
 
     # workaround
-    sudo apt-get install -y puppet puppetmaster facter
+    sudo apt-get install -y puppet puppetmaster facter chkconfig
     sudo rm -rf /etc/puppet
     # see Vagrantfile for /etc/puppet-mount
     sudo ln -s /etc/puppet-mount /etc/puppet
+
+
+    # restart the puppetmaster services to take the puppet installation into account
+    sudo service puppetmaster stop
+    # stop the agent service
+    sudo service puppet stop
+
+    sudo chkconfig puppetmaster off
+    sudo chkconfig puppet off
 fi
 
 # some special setup
@@ -21,11 +30,6 @@ grep "export TERM" $HOME/.bashrc
 if [ ! $? = 0 ]; then
     echo -e "\nexport TERM=xterm" >> $HOME/.bashrc
 fi
-
-# restart the puppetmaster services to take the puppet installation into account
-sudo service puppetmaster stop
-# stop the agent service
-sudo service puppet stop
 
 # to synchronize the master with the agent once
 ~/bin/puppet-master-start-no-daemon.sh --debug &

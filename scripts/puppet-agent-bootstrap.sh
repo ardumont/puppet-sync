@@ -10,10 +10,12 @@ if [ ! -f ./puppetlabs-release-precise.deb ]; then
     sudo apt-get update
 
     # workaround
-    sudo apt-get install -y puppet facter
+    sudo apt-get install -y puppet facter chkconfig
 
     # stop the puppet agent service
     sudo service puppet stop
+
+    sudo chkconfig puppet off
 fi
 
 # some special setup
