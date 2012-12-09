@@ -3,15 +3,15 @@ node 'puppet.agent.com' {
     update => true,
   }
 
-  include packages
+  class {'packages':}
 
-  include network
+  class {'network':}
 
-  include puppet-stumpwm
+  class {'puppet-stumpwm':}
 
-  include puppet-emacs24
+  class {'puppet-emacs24':}
 
-#  include puppet-java
+  class {'puppet_java':}
 
-#  include puppet-clojure
+#  class {'puppet-clojure':}
 }
