@@ -1,3 +1,0 @@
-[submodule "puppet-java"]
-        path = puppet-java
-        url = git://github.com/camptocamp/puppet-java.git
