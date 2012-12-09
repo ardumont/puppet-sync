@@ -1,18 +1,18 @@
 #
-# Class: aptitude
+# Class: puppet-aptitude
 #
-# Installs ``aptitude`` and keeps it up-to-date. Optionally allows full system
+# Installs ``puppet-aptitude`` and keeps it up-to-date. Optionally allows full system
 # updates.
 #
 # Usage:
 #
-#   # Installs ``aptitude`` and keeps it up-to-date.
-#   class { "aptitude": }
+#   # Installs ``puppet-aptitude`` and keeps it up-to-date.
+#   class { "puppet-aptitude": }
 #
 #   # Same as above, except also updates *all* packages on the system every day.
-#   class { "aptitude": update => true }
+#   class { "puppet-aptitude": update => true }
 #
-class aptitude($update=false) {
+class puppet-aptitude($update=false) {
 
     package { "aptitude": ensure => latest }
 
@@ -29,7 +29,7 @@ class aptitude($update=false) {
         mode    => 755,
         owner   => "root",
         path    => "/etc/cron.daily/auto-update",
-        source  => "puppet:///modules/aptitude/auto-update",
+        source  => "puppet:///modules/puppet-aptitude/auto-update",
     }
 
     if $update {
