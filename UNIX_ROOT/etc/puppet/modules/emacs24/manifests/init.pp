@@ -1,4 +1,4 @@
-class puppet-emacs24 {
+class emacs24 {
   Exec['add-repo'] -> Exec['aptitude-update'] -> Package['emacs24']
 
   exec { 'add-repo':

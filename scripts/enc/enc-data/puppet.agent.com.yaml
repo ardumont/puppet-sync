@@ -2,7 +2,7 @@
     update: true
   packages:
   network:
-  puppet-stumpwm:
-  puppet-emacs24:
-  puppet-java:
-# puppet-clojure
+  stumpwm:
+  emacs24:
+  java:
+# clojure

@@ -7,11 +7,11 @@ node 'puppet.agent.com' {
 
   class {'network':}
 
-  class {'puppet-stumpwm':}
+  class {'stumpwm':}
 
-  class {'puppet-emacs24':}
+  class {'emacs24':}
 
-  class {'puppet-java':}
+  class {'java':}
 
-#  class {'puppet-clojure':}
+#  class {'clojure':}
 }

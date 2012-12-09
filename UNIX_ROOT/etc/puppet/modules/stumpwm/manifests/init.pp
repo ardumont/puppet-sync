@@ -1,4 +1,4 @@
-class puppet-stumpwm {
+class stumpwm {
 
    Package['stumpwm'] -> File['xsessions'] -> File['stumpwm.desktop']
 
