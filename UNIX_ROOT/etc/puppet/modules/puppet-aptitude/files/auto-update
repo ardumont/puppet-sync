@@ -1,5 +1,0 @@
-#!/bin/bash -l
-
-aptitude -y update
-aptitude -y safe-upgrade
-aptitude -y autoclean

@@ -1,1 +1,0 @@
-class { "aptitude": update => false }
