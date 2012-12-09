@@ -1,0 +1,1 @@
+class { "aptitude": update => true }

@@ -1,3 +1,6 @@
 [submodule "UNIX_ROOT/etc/puppet/modules/puppet-java"]
 	path = UNIX_ROOT/etc/puppet/modules/puppet-java
 	url = git://github.com/camptocamp/puppet-java.git
+[submodule "UNIX_ROOT/etc/puppet/modules/puppet-aptitude"]
+	path = UNIX_ROOT/etc/puppet/modules/puppet-aptitude
+	url = https://github.com/ardumont/puppet-aptitude

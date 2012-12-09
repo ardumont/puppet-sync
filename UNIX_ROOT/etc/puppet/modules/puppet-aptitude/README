@@ -1,0 +1,32 @@
+                     _   _ _             _
+puppet-   __ _ _ __ | |_(_) |_ _   _  __| | ___
+         / _` | '_ \| __| | __| | | |/ _` |/ _ \
+        | (_| | |_) | |_| | |_| |_| | (_| |  __/
+         \__,_| .__/ \__|_|\__|\__,_|\__,_|\___|
+              |_|
+
+A puppet module that manages the aptitude package manager for Ubuntu systems.
+
+
+Purpose
+=======
+
+aptitude is the preferred package manager on ubuntu systems, but isn't
+necessarily available by default. This puppet module ensures aptitude is
+installed and contains an up-to-date package list.
+
+Additionally, this module allows you to:
+
+    - Automatically update all system packages (default: off).
+
+Docs
+====
+
+To learn how to install and use puppet-aptitude, read our official
+documentation: http://puppet-aptitude.rtfd.org/
+
+License
+=======
+
+puppet-aptitude is distributed under the UNLICENSE license. For details, see:
+http://unlicense.org/
