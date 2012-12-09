@@ -1,8 +1,7 @@
 class packages () {
 
   # fill the packages here
-  package {["emacs",
-            "git",
+  package {["git",
             "gitk",
             "tmux",
             "wget",
@@ -15,8 +14,6 @@ class packages () {
             "language-pack-fr",
             "gparted",
             "stalonetray",
-            "",
-            "sweethome3d",
             "inotify-tools",
             "ruby",
             "curl",
