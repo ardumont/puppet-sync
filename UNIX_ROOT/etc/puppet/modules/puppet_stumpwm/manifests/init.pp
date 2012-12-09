@@ -1,6 +1,7 @@
-class stumpwm {
+class puppet_stumpwm {
     # install the package
     package {'stumpwm':
+      provider => 'aptitude',
       ensure => 'latest',
     }
 
