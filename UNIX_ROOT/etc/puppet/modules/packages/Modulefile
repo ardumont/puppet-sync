@@ -1,0 +1,8 @@
+name 'packages'
+version '0.0.1'
+summary 'A puppet module to install the packages i always use.'
+description 'A puppet module to install the packages i always use.'
+license 'GPLv3'
+author 'Antoine R. Dumont'
+source 'https://github.com/ardumont/puppet-sync'
+project_page 'https://github.com/ardumont/puppet-sync'
