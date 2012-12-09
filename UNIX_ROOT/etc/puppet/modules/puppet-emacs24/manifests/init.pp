@@ -1,4 +1,4 @@
-class puppet_emacs24 {
+class puppet-emacs24 {
   $source_list='cassou-emacs-precise.list'
 
   Exec['add-repo'] -> Exec['apt-update'] -> Package['emacs24']

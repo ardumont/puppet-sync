@@ -1,7 +1,7 @@
   packages:
   network:
-  puppet_stumpwm:
-#  puppet_emacs24:
+  puppet-stumpwm:
+#  puppet-emacs24:
 # java:
 # java-dev:
 # puppet-clojure

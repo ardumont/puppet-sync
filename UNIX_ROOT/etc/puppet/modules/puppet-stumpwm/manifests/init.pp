@@ -1,4 +1,4 @@
-class puppet_stumpwm {
+class puppet-stumpwm {
 
    Package['stumpwm'] -> File['xsessions'] -> File['stumpwm.desktop']
 
@@ -23,6 +23,6 @@ class puppet_stumpwm {
    file {'stumpwm.desktop':
      path   => "$xsessions/stumpwm.desktop",
      ensure => 'present',
-     source => 'puppet:///modules/puppet_stumpwm/stumpwm.desktop',
+     source => 'puppet:///modules/puppet-stumpwm/stumpwm.desktop',
    }
 }
