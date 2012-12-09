@@ -1,3 +1,6 @@
 [submodule "UNIX_ROOT/etc/puppet/modules/puppet-aptitude"]
         path = UNIX_ROOT/etc/puppet/modules/puppet-aptitude
         url = git@github.com:ardumont/puppet-aptitude.git
+[submodule "UNIX_ROOT/etc/puppet/modules/puppet_java"]
+	path = UNIX_ROOT/etc/puppet/modules/puppet_java
+	url = git://github.com/ardumont/puppet_java.git
