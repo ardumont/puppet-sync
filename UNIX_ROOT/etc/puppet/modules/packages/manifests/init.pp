@@ -35,21 +35,14 @@ class packages () {
           'xclip',
           'gpointing-device-settings']
 
-  Exec['apt-update'] -> Package['aptitude'] -> Package[$all]
-
   # global policy for the packages
   Package {
-    ensure => 'installed'
+    ensure => 'installed',
   }
-
-  exec { 'apt-update':
-    command => '/usr/bin/apt-get update'
-  }
-
-  package {'aptitude':}
 
   # fill the packages here
   package {$all:
-    provider => 'aptitude'
+    provider => 'aptitude',
+    require  => Class['puppet-aptitude'],
   }
 }

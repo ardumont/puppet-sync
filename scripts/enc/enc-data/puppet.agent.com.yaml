@@ -1,3 +1,5 @@
+  puppet-aptitude:
+    update: true
   packages:
   network:
   puppet-stumpwm:
