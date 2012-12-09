@@ -10,7 +10,7 @@ if [ ! -f ./puppetlabs-release-precise.deb ]; then
     sudo apt-get update
 
     # workaround
-    sudo aptitude install -y puppet puppetmaster facter
+    sudo apt-get install -y puppet puppetmaster facter
     sudo rm -rf /etc/puppet
     # see Vagrantfile for /etc/puppet-mount
     sudo ln -s /etc/puppet-mount /etc/puppet

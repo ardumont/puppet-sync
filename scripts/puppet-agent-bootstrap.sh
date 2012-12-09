@@ -10,7 +10,7 @@ if [ ! -f ./puppetlabs-release-precise.deb ]; then
     sudo apt-get update
 
     # workaround
-    sudo aptitude install -y puppet facter
+    sudo apt-get install -y puppet facter
 
     # stop the puppet agent service
     sudo service puppet stop
@@ -22,4 +22,4 @@ if [ ! $? = 0 ]; then
     echo -e "\nexport TERM=xterm" >> /home/vagrant/.bashrc
 fi
 
-/bin/puppet-agent-start-no-daemon.sh --debug --onetime
+~/bin/puppet-agent-start-no-daemon.sh --debug --onetime
