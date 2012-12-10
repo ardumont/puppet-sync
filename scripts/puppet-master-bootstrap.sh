@@ -15,14 +15,12 @@ if [ ! -f ./puppetlabs-release-precise.deb ]; then
     # see Vagrantfile for /etc/puppet-mount
     sudo ln -s /etc/puppet-mount /etc/puppet
 
-
     # restart the puppetmaster services to take the puppet installation into account
     sudo service puppetmaster stop
     # stop the agent service
     sudo service puppet stop
 
-    sudo chkconfig puppetmaster off
-    sudo chkconfig puppet off
+    sudo chkconfig -d puppet puppetmaster
 fi
 
 # some special setup
