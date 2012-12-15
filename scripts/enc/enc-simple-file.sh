@@ -11,7 +11,7 @@
 #            "public" env vars, users can customize here
 #            ===========================================
 
-DATA_DIR="/usr/local/bin/enc/enc-data"
+DATA_DIR="/etc/puppet/enc-data"
 
 #                             functions
 #                             =========
