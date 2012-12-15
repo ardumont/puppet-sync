@@ -20,7 +20,8 @@ if [ ! -f ./puppetlabs-release-precise.deb ]; then
     # stop the agent service
     sudo service puppet stop
 
-    sudo chkconfig -d puppet puppetmaster
+    sudo chkconfig puppet off
+    sudo chkconfig puppetmaster off
 fi
 
 # some special setup
@@ -28,12 +29,3 @@ grep "export TERM" $HOME/.bashrc
 if [ ! $? = 0 ]; then
     echo -e "\nexport TERM=xterm" >> $HOME/.bashrc
 fi
-
-# to synchronize the master with the agent once
-~/bin/puppet-master-start-no-daemon.sh --debug &
-
-# let some time for the master to start
-sleep 3
-
-# to synchronize the master with the agent once
-~/bin/puppet-agent-start-no-daemon.sh --debug --onetime
