@@ -1,8 +1,4 @@
 node 'puppet.agent.com' {
-  class {'aptitude':
-    update => true,
-  }
-
   class {'packages':}
 
   class {'network':}

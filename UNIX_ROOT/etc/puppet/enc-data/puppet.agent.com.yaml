@@ -1,5 +1,3 @@
-  aptitude:
-    update: true
   packages:
   network:
   stumpwm:
