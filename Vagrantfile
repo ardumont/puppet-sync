@@ -13,9 +13,9 @@ Vagrant::Config.run do |config|
     vm1_config.vm.network :hostonly, "192.168.33.10"
     vm1_config.vm.host_name = "puppet.master.com"
     vm1_config.vm.share_folder "v-data-1", "/etc/puppet-mount/", "./UNIX_ROOT/etc/puppet/"
-    vm1_config.vm.share_folder "v-data-2", "/root/bin", "./scripts"
-    vm1_config.vm.share_folder "v-data-3", "/usr/local/bin/enc", "./scripts/enc"
-    vm1_config.vm.provision :shell, :path => "./scripts/puppet-master-bootstrap.sh"
+    vm1_config.vm.share_folder "v-data-2", "/root/bin", "./bin"
+    vm1_config.vm.share_folder "v-data-3", "/usr/local/bin/enc", "./bin/enc"
+    vm1_config.vm.provision :shell, :path => "./bin/puppet-master-bootstrap.sh"
   end
 
   config.vm.define :vm2 do |vm2_config|
@@ -24,8 +24,8 @@ Vagrant::Config.run do |config|
     vm2_config.vm.customize ["modifyvm", :id,  "--natdnshostresolver1", "on", "--memory", 512]
     vm2_config.vm.network :hostonly, "192.168.33.11"
     vm2_config.vm.host_name = "puppet.agent.com"
-    vm2_config.vm.share_folder "v-data-1", "/home/vagrant/bin", "./scripts"
-    vm2_config.vm.share_folder "v-data-2", "/root/bin", "./scripts"
-    vm2_config.vm.provision :shell, :path => "./scripts/puppet-agent-bootstrap.sh"
+    vm2_config.vm.share_folder "v-data-1", "/home/vagrant/bin", "./bin"
+    vm2_config.vm.share_folder "v-data-2", "/root/bin", "./bin"
+    vm2_config.vm.provision :shell, :path => "./bin/puppet-agent-bootstrap.sh"
   end
 end
