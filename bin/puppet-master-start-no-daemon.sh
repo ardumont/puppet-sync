@@ -1,3 +1,3 @@
 #!/bin/bash -xe
 
-sudo puppet master --verbose --no-daemonize $*
+sudo puppet master --no-daemonize --verbose --debug $*
