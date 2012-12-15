@@ -12,9 +12,13 @@ if [ ! -f ./puppetlabs-release-precise.deb ]; then
     # workaround
     sudo apt-get install -y puppet facter chkconfig
 
+    # chkconfig fix
+    sudo ln -s /usr/lib/insserv/insserv /sbin/insserv
+
     # stop the puppet agent service
     sudo service puppet stop
 
+    # remove the service
     sudo chkconfig puppet off
 fi
 

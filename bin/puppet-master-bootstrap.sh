@@ -9,8 +9,13 @@ if [ ! -f ./puppetlabs-release-precise.deb ]; then
     sudo dpkg -i puppetlabs-release-precise.deb
     sudo apt-get update
 
-    # workaround
+    # install puppet agent and master
     sudo apt-get install -y puppet puppetmaster facter chkconfig
+
+    # chkconfig fix
+    sudo ln -s /usr/lib/insserv/insserv /sbin/insserv
+
+    # mount /etc/puppet
     sudo rm -rf /etc/puppet
     # see Vagrantfile for /etc/puppet-mount
     sudo ln -s /etc/puppet-mount /etc/puppet
