@@ -37,11 +37,9 @@ class packages () {
 
   # global policy for the packages
   Package {
-    ensure => 'installed',
+    ensure => 'latest',
   }
 
   # fill the packages here
-  package {$all:
-    provider => 'aptitude',
-  }
+  package {$all:}
 }

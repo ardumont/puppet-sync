@@ -6,7 +6,6 @@ class stumpwm {
 
    # install the package
    package {'stumpwm':
-     provider => 'aptitude',
      ensure => 'latest',
    }
 
