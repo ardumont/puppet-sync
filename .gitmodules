@@ -1,0 +1,9 @@
+[submodule "puppet/modules/java"]
+        path = puppet/modules/java
+        url = git@github.com:ardumont/puppet-java.git
+[submodule "puppet/modules/git"]
+        path = puppet/modules/git
+        url = git@github.com:ardumont/puppet-git.git
+[submodule "puppet/modules/apt"]
+	path = puppet/modules/apt
+	url = git@github.com:ardumont/puppetlabs-apt.git
