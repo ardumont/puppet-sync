@@ -7,3 +7,6 @@
 [submodule "puppet/modules/apt"]
 	path = puppet/modules/apt
 	url = git@github.com:ardumont/puppetlabs-apt.git
+[submodule "puppet/modules/stumpwm"]
+	path = puppet/modules/stumpwm
+	url = git@github.com:ardumont/puppet-stumpwm.git
