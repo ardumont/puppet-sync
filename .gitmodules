@@ -10,3 +10,6 @@
 [submodule "puppet/modules/stumpwm"]
 	path = puppet/modules/stumpwm
 	url = git@github.com:ardumont/puppet-stumpwm.git
+[submodule "puppet/modules/emacs24"]
+	path = puppet/modules/emacs24
+	url = git@github.com:ardumont/puppet-emacs24.git
